@@ -1,0 +1,99 @@
+/* <!-- Konfigurasi Tailwind & Font --> */
+/* Menggunakan font Inter */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Styling Scrollbar Kustom */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #2d3748;
+    /* gray-800 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    /* gray-300 */
+    border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    /* gray-600 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+    /* gray-400 */
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+    /* gray-500 */
+}
+
+/* Untuk smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Transisi Carousel */
+.carousel-item {
+    display: none;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+/* Efek fade-in untuk modal */
+.modal {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-content {
+    transition: transform 0.3s ease;
+}
+
+.modal.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal.flex {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.hidden .modal-content {
+    transform: scale(0.95);
+}
+
+.modal.flex .modal-content {
+    transform: scale(1);
+}
+
+/* Tombol filter aktif */
+.filter-btn.active {
+    background-color: hsl(210, 90%, 50%);
+    color: white;
+    border-color: hsl(210, 90%, 50%);
+}
+
+.dark .filter-btn.active {
+    background-color: hsl(210, 90%, 50%);
+    border-color: hsl(210, 90%, 50%);
+}
+
+.modal-content {
+    padding: 0;
+}
